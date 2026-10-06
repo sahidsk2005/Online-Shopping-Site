@@ -523,6 +523,152 @@ footer a {
     gap: 9px
 }
 
+.form select,
+.form textarea {
+    border: 1px solid var(--line);
+    background: rgba(0, 0, 0, .22);
+    color: #fff;
+    border-radius: 12px;
+    padding: 0 13px;
+    outline: none;
+    width: 100%
+}
+
+.form select {
+    height: 46px
+}
+
+.form textarea {
+    padding-top: 12px
+}
+
+.form select option {
+    background: #14151a;
+    color: #fff
+}
+
+.form select:focus,
+.form textarea:focus {
+    border-color: #777
+}
+
+.image-row {
+    display: flex;
+    gap: 8px
+}
+
+.image-row input {
+    flex: 1;
+    min-width: 0
+}
+
+.upload {
+    height: 46px;
+    padding: 0 14px;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, .06);
+    color: #eee;
+    font-weight: 700;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    cursor: pointer;
+    white-space: nowrap
+}
+
+.upload:hover {
+    background: rgba(255, 255, 255, .12)
+}
+
+.upload:disabled {
+    opacity: .6;
+    cursor: default
+}
+
+.image-preview {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 10px;
+    border-radius: 14px;
+    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, .03)
+}
+
+.image-preview img {
+    width: 74px;
+    height: 74px;
+    border-radius: 11px;
+    object-fit: cover;
+    background: #141518;
+    flex: none
+}
+
+.image-status {
+    font-size: 11px;
+    line-height: 1.6;
+    min-height: 74px;
+    display: flex;
+    align-items: center
+}
+
+.image-status .ok,
+.image-status .warn {
+    display: flex;
+    gap: 6px;
+    align-items: flex-start
+}
+
+.ok {
+    color: #7ee0a6;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px
+}
+
+.ok svg,
+.error svg {
+    flex: none
+}
+
+.warn {
+    color: #ffc98b;
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    line-height: 1.6
+}
+
+.notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    padding: 14px 16px;
+    border-radius: 16px;
+    color: #ffc98b;
+    font-size: 12px;
+    line-height: 1.65
+}
+
+.notice svg {
+    flex: none;
+    margin-top: 2px
+}
+
+.grid-full {
+    grid-column: 1/-1
+}
+
+.error {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    line-height: 1.6
+}
+
 @media(max-width:700px) {
     .shell {
         padding: 12px 12px 25px
@@ -576,6 +722,14 @@ footer a {
 
     .admin-grid {
         grid-template-columns: 1fr
+    }
+
+    .image-row {
+        flex-direction: column
+    }
+
+    .image-status {
+        min-height: 0
     }
 
     .admin-head {
