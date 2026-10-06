@@ -11,6 +11,7 @@ create table if not exists public.products (
   created_at timestamptz not null default now()
 );
 
+-- Ensure all columns exist
 alter table public.products
   add column if not exists condition text not null default 'Brand new';
 
@@ -49,3 +50,8 @@ using (true);
 -- In a real store, create ONE admin account in Supabase Authentication.
 -- Do not expose the service_role key in this website.
 -- For a single-admin mini site, the authenticated account is the only admin account you create.
+-- 
+-- NOTE: If you encounter "column 'condition' not found" error:
+-- 1. Clear your Supabase schema cache: Go to SQL Editor and click "Clear schema cache"
+-- 2. Or refresh the browser and reconnect
+-- 3. The column exists in the table - it's just a caching issue
